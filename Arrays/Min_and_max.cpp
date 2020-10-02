@@ -1,19 +1,15 @@
 #include <bits/stdc++.h>
-#include <cstdio>
-#include <cstring>
-#include <cmath>
-#include <chrono>
-#include <complex>
 using namespace std;
 
-
+const int N = 1e5 + 5;
+int a[N];
+int n;
 
 int main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	int n, a[50];
 	cout << "Enter the no. of components in the array:" << endl;
 	cin >> n;
 
@@ -23,15 +19,13 @@ int main()
 
 	//Algorithm to find the minimum and maximum value of an array
 
-	int max = INT_MIN;
-	int min = INT_MAX;
+	int maxx = INT_MIN;
+	int minn = INT_MAX;
 
 	for (int i=0; i<n; i++){
-		if (a[i] > max)
-			max = a[i];
-		if (a[i] < min)
-			min = a[i];
+		maxx = max(maxx, a[i]);
+		minn = min(minn, a[i]);
 	}
 
-	cout << "Minimum value of the array is "<< min << " and the maximum value is "<< max<<"."<< endl;
+	cout << "Minimum value of the array is "<< minn << " and the maximum value is "<< maxx <<"."<< endl;
 }
