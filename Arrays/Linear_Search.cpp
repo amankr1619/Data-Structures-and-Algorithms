@@ -1,21 +1,19 @@
 // Implementation of Linear Search Algorithm
 
 #include <bits/stdc++.h>
-#include <cstdio>
-#include <cstring>
-#include <cmath>
-#include <chrono>
-#include <complex>
 using namespace std;
 
+const int N = 1e5 + 5;
 
+int array[N];
+int number;
 
 int main()
 {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-		int number =0, array[50], key=0;
+		int key;
 		cout << "Enter the no. of components:" << endl;
 		cin >> number;
 
